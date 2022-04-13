@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Curso básico de Vue.js 2 - Reto del tema 14</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="app">
+
+            <h1>Mis cursos de Platzi 💚</h1>
+
+            <p>
+                <input type="text" placeholder="Nombre del curso" v-model="title" />
+            </p>
+            <p>
+                <input type="number" placeholder="Horas" v-model="time" />
+            </p>
+            <p><button v-on:click="addCourse">Guardar curso</button></p>
+
+            <div v-show="warning" class="warning">
+                Para añadir un curso debes introducir su título y el número de horas
+                que le dedicaste...
+            </div>
+            <div v-if="courses.length == 0" class="info">
+                Aun no has registrado ningún curso
+            </div>
+            <div v-else>
+                <h2>Lista de cursos</h2>
+                <div class="list-header row">
+                    <div class="col-1"><strong>ID</strong></div>
+                    <div class="col-2"><strong>Nombre</strong></div>
+                    <div class="col-3"><strong>Horas dedicadas</strong></div>
+                </div>
+                <div class="row"
+                     v-for="(course, index) in courses" v-bind:key="course.id"
+                >
+                    <div class="col-1">{{ course.id }}</div>
+                    <div class="col-2">{{ course.title }}</div>
+                    <div class="col-3">{{ course.time }}</div>
+                </div>
+                <div class="list-footer row">
+                    <div class="col-1"></div>
+                    <div class="col-2"></div>
+                    <div class="col-3"><strong>{{ totalTime }}</strong></div>
+                </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

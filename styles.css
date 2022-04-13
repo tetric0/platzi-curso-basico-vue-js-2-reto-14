@@ -1,0 +1,58 @@
+html {
+    padding: 20px;
+    margin: 0;
+    color: #3d3d3d;
+}
+  
+.info {
+    color: blue;
+    font-weight: bold;
+    background-color: aliceblue;
+    padding: 10px;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+}
+
+.warning {
+    color: orange;
+    font-weight: bold;
+    background-color: rgb(255, 244, 194);
+    padding: 10px;
+    border: 1px solid orange;
+    margin-bottom: 10px;
+}
+
+body, input, button {
+    font-family: system-ui;
+}
+
+input, button {
+    font-size: 15px;
+}
+
+.row {
+    display: flex;
+}
+
+.col-1 {
+    width: 50px;
+}
+
+.col-2 {
+    flex: 1;
+}
+
+.col-3 {
+    width: 150px;
+    text-align: right;
+}
+
+.list-header {
+    border-bottom: 2px solid black;
+    margin: 10px 0;
+}
+
+.list-footer {
+    border-top: 2px solid black;
+    margin: 10px 0;
+}
